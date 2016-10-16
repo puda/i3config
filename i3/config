@@ -97,7 +97,7 @@ set $ws1 "1: Browsers "
 set $ws2 "2: Terminals "
 set $ws3 "3: Emacs "
 set $ws4 "4: Email "
-set $ws4 "5: Messenger "
+set $ws5 "5: Messenger "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -207,6 +207,7 @@ exec_always emacs
 exec_always thunderbird
 exec_always google-chrome
 exec_always gnome-terminal
+exec_always messengerfordesktop
 
 #monitor
 exec_always xrandr --output DP-3 --off --output DVI-I-0 --primary --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DVI-I-1 --off --output DP-2 --off --output DP-1 --off --output DP-0 --mode 1600x900 --pos 1600x0 --rotate normal
