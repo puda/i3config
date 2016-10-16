@@ -97,13 +97,14 @@ set $ws1 "1: Browsers "
 set $ws2 "2: Terminals "
 set $ws3 "3: Emacs "
 set $ws4 "4: Email "
+set $ws4 "5: Messenger "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -115,7 +116,7 @@ bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -126,6 +127,7 @@ assign [class="google-chrome"] $ws1
 assign [class="Gnome-terminal"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Thunderbird"] $ws4
+assign [class="messengerfordesktop"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -159,6 +161,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# hide title bar
+new_window none
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -204,7 +209,7 @@ exec_always google-chrome
 exec_always gnome-terminal
 
 #monitor
-exec_always xrandr --output DP-3 --off --output DVI-I-0 --primary --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DVI-I-1 --off --output DP-2 --mode 1600x900 --pos 1600x0 --rotate normal --output DP-1 --off --output DP-0 --off
+exec_always xrandr --output DP-3 --off --output DVI-I-0 --primary --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-0 --off --output DP-5 --off --output DP-4 --off --output DVI-I-1 --off --output DP-2 --off --output DP-1 --off --output DP-0 --mode 1600x900 --pos 1600x0 --rotate normal
 
 # Set background picture
 exec_always feh --bg-scale /home/puda/Pictures/cloud_storage.png
